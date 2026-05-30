@@ -1,0 +1,12 @@
+
+        /* Додамо трохи стилів, щоб це виглядало як картки */
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        #hero-container { display: flex; flex-wrap: wrap; gap: 15px; }
+        .hero-card { 
+            background: white; 
+            border: 1px solid #ddd; 
+            padding: 15px; 
+            width: 200px; 
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
