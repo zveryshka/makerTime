@@ -14,8 +14,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/zveryshka/makerTime/issues"
   },
-  "homepage": "https://github.com/zveryshka/makerTime#readme"
+  "homepage": "https://github.com/zveryshka/makerTime#readme",
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
 }
