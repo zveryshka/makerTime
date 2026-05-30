@@ -1,0 +1,21 @@
+{
+  "name": "makertime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zveryshka/makerTime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zveryshka/makerTime/issues"
+  },
+  "homepage": "https://github.com/zveryshka/makerTime#readme"
+}
