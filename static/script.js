@@ -10,12 +10,25 @@ function renderHeroes(heroes) {
     heroes.forEach(hero => {
         const div = document.createElement('div');
         div.className = 'hero-card';
+
+        div.onclick = () => div.classList.toggle('flipped');
+
         div.innerHTML = `
-            <h3>${hero.localized_name}</h3>
-            <p>Атрибут: ${hero.primary_attr}</p>
-            <p>Тип: ${hero.attack_type}</p>
-        
-            <img src="https://cdn.cloudflare.steamstatic.com${hero.img}" alt="${hero.localized_name}">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>${hero.localized_name}</h3>
+                    <img src="https://cdn.cloudflare.steamstatic.com${hero.img}" alt="${hero.localized_name}">
+                    <h3>${hero.localized_name}</h3>
+                    <p>Атрибут: ${hero.primary_attr}</p>
+                    <p>Тип: ${hero.attack_type}</p>
+                    <p>Швидкість: ${hero.move_speed}</p>
+                    <p>Дальність: ${hero.attack_range}</p>
+                    <p>Броня: ${hero.base_armor}</p>
+                </div>
+                <div class="card-back">
+                    
+                </div>
+            </div>
         `;
         container.appendChild(div);
     });
