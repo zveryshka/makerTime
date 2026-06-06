@@ -19,11 +19,11 @@ function renderHeroes(heroes) {
                     <h3>${hero.localized_name}</h3>
                     <img src="https://cdn.cloudflare.steamstatic.com${hero.img}" alt="${hero.localized_name}">
                     <h3>${hero.localized_name}</h3>
-                    <p>Атрибут: ${hero.primary_attr}</p>
-                    <p>Тип: ${hero.attack_type}</p>
-                    <p>Швидкість: ${hero.move_speed}</p>
-                    <p>Дальність: ${hero.attack_range}</p>
-                    <p>Броня: ${hero.base_armor}</p>
+                    <p>Атрибут: ${hero.primary_attr == "str" ? "👊🏿Сила" : hero.primary_attr == "agi" ? "🍃Спритність" : "🧠Інтелект"}</p>
+                    <p>Тип: ${hero.attack_type == "Melee" ? "⚔Ближнє" : "🏹Дальнє"}</p>
+                    <p><i class="fa-solid fa-wind"></i>Швидкість: ${hero.move_speed}</p>
+                    <p><i class="fa-solid fa-gun"></i>Дальність: ${hero.attack_range}</p>
+                    <p><i class="fa-solid fa-shield"></i>Броня: ${hero.base_armor}</p>
                 </div>
                 <div class="card-back">
                     
