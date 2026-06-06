@@ -11,10 +11,20 @@
 
     <h1>Мій сайт з героями Dota 2</h1>
 
+    
+
+    <select name="heroes" class="custom-select" id="hero-select" onchange="filterHeroesBySelect()">
+        <option value="all">Всі герої</option>
+        <option value="str">Сила</option>
+        <option value="agi">Спритність</option>
+        <option value="int">Інтелект</option>
+    </select>
+
     <div id="loader">Завантажую дані з API...</div>
 
     <div id="hero-container"></div>
 
-   
+    
+
 </body>
-</html>
+</html>і
