@@ -20,6 +20,7 @@
                         <h3>${hero.localized_name}</h3>
                         <p>Атрибут: ${hero.primary_attr.toUpperCase()}</p>
                         <p>Тип: ${hero.attack_type}</p>
+                        <img src="https://cdn.cloudflare.steamstatic.com/${hero.img}">
                     `;
                     container.appendChild(div);
                 });
@@ -27,5 +28,7 @@
                 loader.innerText = 'Щось пішло не так: ' + error.message;
             }
         }
+
+        
 
         fetchHeroes();
