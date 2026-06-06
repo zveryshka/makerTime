@@ -21,12 +21,7 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
 
-        .hero-card img {
-    max-width: 100%;    
-    height: auto;       
-    display: block;
-    margin-bottom: 10px;
-}
+
 
 footer{
     background-color: #333;
@@ -68,12 +63,7 @@ footer{
             transform: scale(1.005);
         }
 
-        /* img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        } */
+    
 
         img {
     width: 100%;          /* Змушуємо всі картинки зайняти всю ширину картки */
@@ -83,3 +73,5 @@ footer{
     margin-bottom: 10px;
     border-radius: 6px;
 }
+
+
