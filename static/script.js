@@ -26,7 +26,11 @@ function renderHeroes(heroes) {
                     <p>Броня: ${hero.base_armor}</p>
                 </div>
                 <div class="card-back">
-                    
+                <p>Про-піки: ${hero.pro_pick}</p>
+                <p>Про-віни: ${hero.pro_win}</p>
+                <p>Про-бани: ${hero.pro_ban}</p>
+                <p>Паб-піки: ${hero.pub_pick}</p>
+                <p>Паб-віни: ${hero.pub_win}</p>
                 </div>
             </div>
         `;
