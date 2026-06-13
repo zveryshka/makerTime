@@ -3,6 +3,7 @@ let allHeroes = [];
 
 const container = document.getElementById('hero-container');
 const loader = document.getElementById('loader');
+const searchInput = document.getElementById('search-input');
 
 
 function renderHeroes(heroes) {
@@ -19,7 +20,7 @@ function renderHeroes(heroes) {
                     <h3>${hero.localized_name}</h3>
                     <img src="https://cdn.cloudflare.steamstatic.com${hero.img}" alt="${hero.localized_name}">
                     <h3>${hero.localized_name}</h3>
-                    <p>Атрибут: ${hero.primary_attr == "str" ? "👊🏿Сила" : hero.primary_attr == "agi" ? "🍃Спритність" : "🧠Інтелект"}</p>
+                    <p>Атрибут: ${hero.primary_attr == "str" ? "👊🏿Сила" : hero.primary_attr == "agi" ? "🍃Спритність" : hero.primary_attr == "int" ? "🧠Інтелект" : "універсал"}</p>
                     <p>Тип: ${hero.attack_type == "Melee" ? "⚔Ближнє" : "🏹Дальнє"}</p>
                     <p><i class="fa-solid fa-wind"></i>Швидкість: ${hero.move_speed}</p>
                     <p><i class="fa-solid fa-gun"></i>Дальність: ${hero.attack_range}</p>
@@ -57,6 +58,7 @@ async function fetchHeroes() {
 function filterHeroesBySelect() {
     const select = document.getElementById('hero-select');
     const value = select.value; 
+    
 
     if (value === 'all') {
         renderHeroes(allHeroes);
@@ -65,6 +67,15 @@ function filterHeroesBySelect() {
         const filtered = allHeroes.filter(hero => hero.primary_attr === value);
         renderHeroes(filtered);
     }
+}
+
+function filterHeroesBySearch() {
+    const searchValue = searchInput.value.toLowerCase();
+
+    const filteredBySearch = allHeroes.filter(hero => {
+        return hero.localized_name.toLowerCase().includes(searchValue);
+    })
+    renderHeroes(filteredBySearch);
 }
 
 
